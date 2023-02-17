@@ -38,24 +38,10 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import obj from "../classes/foo";
 
-export default defineComponent({
-  name: "HelloWorld",
-  props: {
-    msg: String,
-  },
-  data() {
-    return {
-      foo: {} as obj,
-    };
-  },
-  mounted() {
-    this.foo = new obj("heyo");
-  },
-});
+const foo = new obj("heyo");
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
